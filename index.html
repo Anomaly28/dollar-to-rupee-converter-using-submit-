@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Currency Converter</title>
+<style>
+* { font-size: 40px; }
+body { background-color: azure; }
+</style>
+</head>
+<body>
+<center>
+<h1>Currency Converter</h1>
+<form>
+    <label>$</label>
+    <input type="number" id="dollar" placeholder="Enter amount in $" />
+    <br/><br/>
+    <label>₹</label>
+    <input type="number" id="rupee" placeholder="Amount in ₹" />
+    <br/><br/>
+</form>
+<script>
+let dollar = document.getElementById("dollar");
+let rupee = document.getElementById("rupee");
+dollar.addEventListener("input", function() {
+    let d = parseFloat(dollar.value);
+    let r = d * 84;
+    rupee.value = r.toFixed(2);
+});
+</script>
+</center>
+</body>
+</html>
